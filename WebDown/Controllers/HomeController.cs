@@ -32,7 +32,7 @@ namespace WebDown.Controllers
         private FileExtensionContentTypeProvider provider = new FileExtensionContentTypeProvider();
         public IActionResult Down()
         {
-            var file = @"H:\百度网盘\MobaXterm_22.1_Green.zip";
+            var file = @"H:\百度网盘\ubuntu.zip";
             provider.TryGetContentType(file, out var contentType);
             var result = PhysicalFile(file, contentType);
             result.EnableRangeProcessing = true;
